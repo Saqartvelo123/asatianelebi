@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <title>მთავარი გვერდი</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #1a1a1a;
+            color: #27ae60;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+            padding: 40px;
+            border: 2px solid #27ae60;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(39, 174, 96, 0.3);
+        }
+
+        .db-button {
+            background-color: transparent;
+            color: #27ae60;
+            border: 2px solid #27ae60;
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .db-button:hover {
+            background-color: #27ae60;
+            color: #1a1a1a;
+            box-shadow: 0 0 15px #27ae60;
+        }
+    </style>
+</head>
+<body>
+<h1 style="color: #27ae60; text-shadow: 0 0 15px rgba(39, 174, 96, 0.5); margin-bottom: 30px;">
+        ასათიანელები
+    </h1>
+
+  <input type="text" id="newUserName" placeholder="შეიყვანეთ სახელი" style="padding: 10px; border-radius: 5px; border: 1px solid #27ae60; background: #1a1a1a; color: white; margin-bottom: 10px;">
+
+<button class="db-button" onclick="openDatabase()">
+    📂 მონაცემთა ბაზა
+</button>
+
+<script>
+    function openDatabase() {
+        const correctPassword = "1234"; 
+        const nameInput = document.getElementById("newUserName").value;
+        
+        // ვამოწმებთ, სახელი თუ წერია
+        if (nameInput === "") {
+            alert("გთხოვთ, ჯერ შეიყვანოთ სახელი!");
+            return;
+        }
+
+        let userPass = prompt("გთხოვთ შეიყვანოთ პაროლი:");
+
+        if (userPass === correctPassword) {
+            // აქ ხდება "ბაზაში" შენახვა:
+            localStorage.setItem("lastUser", nameInput);
+            
+            window.location.href = "ss.html"; 
+        } else if (userPass !== null) {
+            alert("წვდომა უარყოფილია!");
+        }
+    }
+</script>
+
+
+</body>
+</html>

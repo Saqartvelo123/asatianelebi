@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <title>მონაცემთა ბაზა</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1a1a1a;
+            color: white;
+            padding: 50px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #27ae60;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #27ae60;
+            color: #1a1a1a;
+        }
+        .back-btn {
+            color: #27ae60;
+            text-decoration: none;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+        .user-link {
+    color: inherit; /* ფერი იქნება ისეთივე, როგორიც ცხრილის ტექსტისაა */
+        /* მაუსის მიტანისას კურსორის შეცვლა და ტექსტის განათება */
+        text-decoration: none; /* აუქმებს ხაზგასმას */
+        display: block; /* რომ მთელ უჯრაზე დაჭერა შეიძლებოდეს */
+        
+        }
+td:nth-child(2) {
+    cursor: pointer; /* კურსორი ხდება საჩვენებელი თითი */
+    transition: 0.3s; /* ეფექტი რომ რბილად მოხდეს */
+}
+
+td:nth-child(2):hover {
+    color: #2ecc71; /* სახელის ფერის შეცვლა მიტანისას */
+    background-color: rgba(39, 174, 96, 0.1); /* მსუბუქი ფონი სახელის უჯრაში */
+    text-shadow: 0 0 8px #27ae60; /* "ჰაკერული" ნათება */
+}
+    </style>
+</head>
+<body>
+    <script>
+    // გვერდის ჩატვირთვისას სრულდება ეს ფუნქცია
+    window.onload = function() {
+        // ბრაუზერის მეხსიერებიდან ვიღებთ სახელს
+        const savedName = localStorage.getItem("lastUser");
+
+        if (savedName) {
+            const table = document.querySelector("table");
+            
+            // ვქმნით ახალ მწკრივს (Row)
+            const newRow = table.insertRow(-1); 
+
+            // ვამატებთ უჯრებს (Cells)
+            newRow.innerHTML = `
+                <td>004</td>
+                <td>${savedName}</td>
+                <td>ახალი მომხმარებელი</td>
+            `;
+        }
+    };
+</script>
+    <a href="index.html" class="back-btn">← უკან დაბრუნება</a>
+    <h1>სასტავი</h1>
+    
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>მომხმარებელი</th>
+            <th>სტატუსი</th>
+        </tr>
+        
+        <td>001</td>
+            <td><a href="giorgi.html" class="user-link">გიორგი</a></td>
+            <td>ადმინი</td>
+        <tr>
+            <td>002</td>
+            <td><a href="chixia.html" class="user-link">ჩიხია</a></td>
+            <td>მაფიოზი</td>
+        </tr>
+        <tr>
+            <td>003</td>
+            <td><a href="luka.html" class="user-link">ლუკა</a></td>
+            <td>წარუმატებელი ბიზნესმენი</td>
+        </tr>
+    </table>
+</body>
+</html>

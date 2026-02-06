@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <title>გიორგის პროფილი</title>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #1a1a1a;
+            color: #27ae60;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .profile-card {
+            background-color: #262626;
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid #27ae60;
+            box-shadow: 0 0 20px rgba(39, 174, 96, 0.2);
+            width: 450px; /* ცოტა გავზარდოთ სიგანე */
+            position: relative;
+            overflow: hidden;
+        }
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid #27ae60;
+            float: right;
+            margin-left: 20px;
+            box-shadow: 0 0 15px #27ae60;
+            object-fit: cover;
+            background-color: #333; /* თუ სურათი არ გამოჩნდება, ნაცრისფერი იყოს */
+        }
+        h2 {
+            border-bottom: 2px solid #27ae60;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        .info-row {
+            margin: 15px 0;
+            font-size: 16px;
+            clear: left; /* ტექსტი რომ არ აირიოს */
+        }
+        .label {
+            color: #888;
+            font-size: 13px;
+            display: block;
+            margin-bottom: 2px;
+        }
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 25px;
+            color: #27ae60;
+            text-decoration: none;
+            font-size: 14px;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+
+<div class="profile-card">
+    <img src="სასა.jpg.jfif" alt="პროფილი" class="profile-img">
+
+    <h2>👤 ასატიანი</h2>
+    
+    <div class="info-row">
+        <span class="label">ზედმეტსახელი:</span>
+        ხარო
+    </div>
+
+    <div class="info-row">
+        <span class="label">სტატუსი:</span>
+        გარაჟის მფლობელი და უბნის კოლორიტი
+    </div>
+
+    <div class="info-row">
+        <span class="label">ასაკი:</span>
+        მაღალი
+    </div>
+
+    <div class="info-row">
+        <span class="label">ელ-ფოსტა:</span>
+        bozebis-dedas-veseqsave12@gmail.com
+    </div>
+
+    <div class="info-row">
+        <span class="label">მოტივი:</span>
+        გახდეს უძლიერესი ეთიკალ ჰაკერი
+    </div>
+
+    <a href="ss.html" class="back-link">← დაბრუნება ბაზაში</a>
+</div>
+
+</body>
+</html>
